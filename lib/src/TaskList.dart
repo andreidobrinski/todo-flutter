@@ -10,6 +10,7 @@ class TaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: getTasks(),
+      shrinkWrap: true,
     );
   }
 

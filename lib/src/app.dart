@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'TodoProvider.dart';
 import 'TaskList.dart';
+import 'AddTask.dart';
 
 class App extends StatelessWidget {
   Widget build(context) {
@@ -11,8 +12,11 @@ class App extends StatelessWidget {
       ),
       body: Container(
         child: Consumer<TodoProvider>(
-          builder: (context, todos, child) => TaskList(
-            tasks: todos.allTasks,
+          builder: (context, todos, child) => Column(
+            children: <Widget>[
+              Container(child: TaskList(tasks: todos.allTasks)),
+              AddTask(),
+            ],
           ),
         ),
       ),
