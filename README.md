@@ -1,16 +1,9 @@
-# todo
+# Todo Flutter
 
-A new Flutter project.
+A todo app built in Flutter.
 
-## Getting Started
+## Why?
 
-This project is a starting point for a Flutter application.
+To build a todo app that can I can use at the gym. Each todo item will uncheck itself a week after it's been checked. This helps to keep track of all the exercises to be completed in a week, while being flexible about which day they get done.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Also to learn Dart and Flutter by building a practical application and to learn and contribute with other members of the Google Developer Group Toronto Study Jam.
