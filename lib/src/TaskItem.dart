@@ -16,7 +16,14 @@ class TaskItem extends StatelessWidget {
           Provider.of<TodoProvider>(context, listen: false).toggleTodo(task);
         },
       ),
-      title: Text(task.title),
+      title: Text(
+        task.title,
+        style: TextStyle(
+          color: task.complete ? Colors.grey : Colors.black,
+          decoration:
+              task.complete ? TextDecoration.lineThrough : TextDecoration.none,
+        ),
+      ),
       trailing: IconButton(
         icon: Icon(
           Icons.delete,
