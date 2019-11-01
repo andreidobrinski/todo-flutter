@@ -11,6 +11,6 @@ Also to learn Dart and Flutter by building a practical application and to learn 
 ## Progress
 
 - [x] Basic CRUD: add, delete, check/uncheck todos
-- [] Persist todo list on device
+- [x] Persist todo list on device
 - [] Store and display date/time of completed tasks
 - [] Uncheck todo after a week of being completed
