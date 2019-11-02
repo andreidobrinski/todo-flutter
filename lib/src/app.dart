@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('todo app'),
+        title: Text('Gym Todo'),
       ),
       body: Container(
         child: Consumer<TodoProvider>(

@@ -40,7 +40,7 @@ class AddTaskState extends State<AddTask> {
           padding: EdgeInsets.all(15.0),
           child: RaisedButton(
               child: Text(
-                'Add New Todo',
+                'Add New Exercise',
                 style: TextStyle(
                   color: Colors.white,
                 ),
