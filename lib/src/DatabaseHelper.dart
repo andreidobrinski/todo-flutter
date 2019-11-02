@@ -8,6 +8,7 @@ final String tableTodos = 'todos';
 final String columnId = 'id';
 final String columnTitle = 'title';
 final String columnComplete = 'complete';
+final String columnDateCompleted = 'dateCompleted';
 
 class DatabaseHelper {
   static final _databaseName = "todos_database.db";
@@ -35,7 +36,8 @@ class DatabaseHelper {
               CREATE TABLE $tableTodos (
                 $columnId INTEGER PRIMARY KEY,
                 $columnTitle TEXT NOT NULL,
-                $columnComplete INTEGER NOT NULL
+                $columnComplete INTEGER NOT NULL,
+                $columnDateCompleted TEXT
               )
               ''');
   }
@@ -49,6 +51,7 @@ class DatabaseHelper {
         id: maps[i]['id'],
         title: maps[i]['title'],
         complete: maps[i]['complete'] == 1 ? true : false,
+        dateCompleted: maps[i]['dateCompleted'],
       );
     });
   }
