@@ -15,6 +15,16 @@ class TodoProvider extends ChangeNotifier {
   TodoProvider() {
     getTasks().then((tasks) {
       _tasks = tasks;
+      tasks.forEach((task) {
+        if (task.dateCompleted != null) {
+          int difference = DateTime.now()
+              .difference(DateTime.parse(task.dateCompleted))
+              .inDays;
+          if (difference > 7) {
+            toggleTodo(task);
+          }
+        }
+      });
       notifyListeners();
     });
   }
