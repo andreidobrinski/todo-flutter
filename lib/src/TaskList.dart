@@ -8,9 +8,8 @@ class TaskList extends StatelessWidget {
   TaskList({@required this.tasks});
 
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: getTasks(),
-      shrinkWrap: true,
     );
   }
 

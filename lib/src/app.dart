@@ -12,11 +12,12 @@ class App extends StatelessWidget {
       ),
       body: Container(
         child: Consumer<TodoProvider>(
-          builder: (context, todos, child) => Column(
+          builder: (context, todos, child) => ListView(
             children: <Widget>[
               Container(child: TaskList(tasks: todos.allTasks)),
               AddTask(),
             ],
+            shrinkWrap: true,
           ),
         ),
       ),

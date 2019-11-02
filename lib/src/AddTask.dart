@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 
 import 'TodoProvider.dart';
 import 'TaskModel.dart';
-import 'DatabaseHelper.dart';
 
 class AddTask extends StatefulWidget {
   @override
@@ -37,19 +36,21 @@ class AddTaskState extends State<AddTask> {
   @override
   Widget build(BuildContext context) {
     if (!showTextField) {
-      return RaisedButton(
-          child: Text(
-            'Add New Todo',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-          color: Colors.blue,
-          onPressed: () {
-            setState(() {
-              showTextField = true;
-            });
-          });
+      return Padding(
+          padding: EdgeInsets.all(15.0),
+          child: RaisedButton(
+              child: Text(
+                'Add New Todo',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              color: Colors.blue,
+              onPressed: () {
+                setState(() {
+                  showTextField = true;
+                });
+              }));
     }
     return Padding(
       padding: EdgeInsets.all(15.0),
