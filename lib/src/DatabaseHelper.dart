@@ -46,12 +46,16 @@ class DatabaseHelper {
     Database db = await database;
     List<Map<String, dynamic>> maps = await db.query(tableTodos);
 
-    return List.generate(maps.length, (i) {
+    var incomplete = maps.where((item) => item['dateCompleted'] == null);
+    var complete = maps.where((item) => item['dateCompleted'] != null);
+    var ordered = List.from(incomplete)..addAll(complete);
+
+    return List.generate(ordered.length, (i) {
       return TaskModel(
-        id: maps[i]['id'],
-        title: maps[i]['title'],
-        complete: maps[i]['complete'] == 1 ? true : false,
-        dateCompleted: maps[i]['dateCompleted'],
+        id: ordered[i]['id'],
+        title: ordered[i]['title'],
+        complete: ordered[i]['complete'] == 1 ? true : false,
+        dateCompleted: ordered[i]['dateCompleted'],
       );
     });
   }
