@@ -86,16 +86,4 @@ class DatabaseHelper {
       whereArgs: [task.id],
     );
   }
-
-  // Future<TaskModel> queryWord(int id) async {
-  //   Database db = await database;
-  //   List<Map> maps = await db.query(tableTodos,
-  //       columns: [columnId, columnTitle, columnComplete],
-  //       where: '$columnId = ?',
-  //       whereArgs: [id]);
-  //   if (maps.length > 0) {
-  //     return TaskModel.fromMap(maps.first);
-  //   }
-  //   return null;
-  // }
 }
