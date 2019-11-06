@@ -35,18 +35,27 @@ class TodoProvider extends ChangeNotifier {
     final taskIndex = _tasks.indexOf(task);
     _tasks[taskIndex].toggleComplete();
     await helper.updateTask(task);
+    await getTasks().then((tasks) {
+      _tasks = tasks;
+    });
     notifyListeners();
   }
 
   void addTodo(TaskModel task) async {
     _tasks.add(task);
     await helper.insertTask(task);
+    await getTasks().then((tasks) {
+      _tasks = tasks;
+    });
     notifyListeners();
   }
 
   void deleteTodo(TaskModel task) async {
     _tasks.remove(task);
     await helper.deleteTask(task.id);
+    await getTasks().then((tasks) {
+      _tasks = tasks;
+    });
     notifyListeners();
   }
 }
