@@ -33,8 +33,8 @@ Also to learn Dart and Flutter by building a practical application and to learn 
 
 ## Architecture
 
-Here's a tree of the widgets used:
+Here's a tree of the widgets used:  
 ![widgets](./widgets.png)
 
-Here's how that maps to the UI:
+Here's how that maps to the UI:  
 ![labelled demo](./demo-labelled.png)
