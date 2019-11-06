@@ -9,12 +9,13 @@ class TodoProvider extends ChangeNotifier {
   List<TaskModel> _tasks = [];
 
   Future<List<TaskModel>> getTasks() async {
-    return await helper.getAllTasks();
+    List<TaskModel> updatedTasks = await helper.getAllTasks();
+    _tasks = updatedTasks;
+    return updatedTasks;
   }
 
   TodoProvider() {
     getTasks().then((tasks) {
-      _tasks = tasks;
       tasks.forEach((task) {
         if (task.dateCompleted != null) {
           int difference = DateTime.now()
@@ -35,27 +36,21 @@ class TodoProvider extends ChangeNotifier {
     final taskIndex = _tasks.indexOf(task);
     _tasks[taskIndex].toggleComplete();
     await helper.updateTask(task);
-    await getTasks().then((tasks) {
-      _tasks = tasks;
-    });
+    await getTasks();
     notifyListeners();
   }
 
   void addTodo(TaskModel task) async {
     _tasks.add(task);
     await helper.insertTask(task);
-    await getTasks().then((tasks) {
-      _tasks = tasks;
-    });
+    await getTasks();
     notifyListeners();
   }
 
   void deleteTodo(TaskModel task) async {
     _tasks.remove(task);
     await helper.deleteTask(task.id);
-    await getTasks().then((tasks) {
-      _tasks = tasks;
-    });
+    await getTasks();
     notifyListeners();
   }
 }
