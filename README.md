@@ -1,4 +1,4 @@
-![logo](./icon.png)
+![logo](./icon-small.png)
 
 # Gym Todo
 
