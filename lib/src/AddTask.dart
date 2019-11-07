@@ -45,7 +45,7 @@ class AddTaskState extends State<AddTask> {
                   color: Colors.white,
                 ),
               ),
-              color: Colors.blue,
+              color: Colors.grey[850],
               onPressed: () {
                 setState(() {
                   showTextField = true;
@@ -69,7 +69,7 @@ class AddTaskState extends State<AddTask> {
                   color: Colors.white,
                 ),
               ),
-              color: Colors.blue,
+              color: Colors.grey[850],
               onPressed: onAdd,
             ),
           ],

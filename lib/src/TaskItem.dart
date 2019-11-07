@@ -15,6 +15,7 @@ class TaskItem extends StatelessWidget {
         onChanged: (bool checked) {
           Provider.of<TodoProvider>(context, listen: false).toggleTodo(task);
         },
+        activeColor: Colors.grey[850],
       ),
       title: Text(
         task.title,

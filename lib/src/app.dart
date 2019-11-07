@@ -9,6 +9,7 @@ class App extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Gym Todo'),
+        backgroundColor: Colors.grey[850],
       ),
       body: Container(
         child: Consumer<TodoProvider>(
