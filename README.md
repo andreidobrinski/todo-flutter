@@ -1,3 +1,5 @@
+![logo](./icon.png)
+
 # Gym Todo
 
 A todo app to help keep track of exercises to be done at the gym every week.
