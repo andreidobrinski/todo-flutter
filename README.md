@@ -12,6 +12,8 @@ To build a todo app that can I can use at the gym. Each todo item will uncheck i
 
 Also to learn Dart and Flutter by building a practical application and to learn and contribute with other members of the Google Developer Group Toronto Study Jam.
 
+Update: A version written with React and TypeScript can be found [here](https://github.com/andreidobrinski/gym-todo).
+
 ## Technologies Used
 
 - Flutter
